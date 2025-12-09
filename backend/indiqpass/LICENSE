@@ -1,0 +1,125 @@
+# IndiqPass License
+
+## Source Available License - Non-Commercial Use
+
+Copyright (c) 2025 Lucas Buarque and IndiqAI
+
+## Terms and Conditions
+
+### 1. Definitions
+
+- "Software" refers to the IndiqPass source code, documentation, and associated materials in this repository
+- "Author" refers to Lucas Buarque and/or the IndiqAI company
+- "You" refers to any individual or entity exercising permissions under this License
+
+### 2. Grant of Rights
+
+Subject to the terms and conditions of this License, the Author hereby grants You a worldwide, royalty-free, non-exclusive license to:
+
+a) **View and Study**: Access, view, and study the Software source code for educational and reference purposes
+
+b) **Non-Commercial Use**: Use, copy, modify, and distribute the Software for non-commercial purposes, including:
+   - Personal projects and learning
+   - Educational purposes and teaching
+   - Academic research
+   - Open source contributions to this project
+
+c) **Attribution**: Create derivative works, provided that:
+   - You retain this license and copyright notice
+   - You clearly indicate changes made to the original Software
+   - You provide appropriate credit to the Author
+
+### 3. Restrictions
+
+You may NOT:
+
+a) **Commercial Use**: Use the Software, in whole or in part, for commercial purposes without explicit written permission from the Author. Commercial use includes but is not limited to:
+   - Incorporating the Software into commercial products or services
+   - Using the Software to provide paid services
+   - Selling, licensing, or distributing the Software for profit
+
+b) **Branding**: Use the "IndiqAI", "IndiqPass", or any related trademarks, logos, or branding without explicit written permission from the Author
+
+c) **Misrepresentation**: Claim that your use of the Software is officially affiliated with, endorsed by, or sponsored by the Author or IndiqAI
+
+d) **Proprietary Claims**: Remove, alter, or obscure any copyright notices, license terms, or attribution requirements
+
+### 4. Commercial License
+
+If You wish to use the Software for commercial purposes:
+
+1. Contact the Author to discuss commercial licensing terms
+2. A separate commercial license agreement will be required
+3. Commercial licenses may include additional rights, support, and warranties
+
+Contact for commercial inquiries: [Your contact email or website]
+
+### 5. Disclaimer of Warranty
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+### 6. Limitation of Liability
+
+To the maximum extent permitted by applicable law, in no event will the Author be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from:
+
+a) Your use or inability to use the Software
+b) Any unauthorized access to or use of the Software
+c) Any bugs, viruses, or other harmful code in the Software
+
+### 7. Contributions
+
+By submitting contributions (pull requests, issues, suggestions) to this project, You agree that:
+
+a) Your contributions will be licensed under the same terms as this License
+b) You have the right to submit the contributions
+c) The Author may use, modify, and distribute your contributions as part of the Software
+
+### 8. Termination
+
+This License is effective until terminated. Your rights under this License will terminate automatically without notice if You fail to comply with any of its terms. Upon termination, You must:
+
+a) Cease all use of the Software
+b) Destroy all copies of the Software in Your possession or control
+
+### 9. General
+
+a) **Governing Law**: This License shall be governed by and construed in accordance with the laws of [Your Jurisdiction], excluding its conflicts of law provisions
+
+b) **Severability**: If any provision of this License is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable
+
+c) **Entire Agreement**: This License constitutes the entire agreement between You and the Author regarding the Software
+
+d) **Amendments**: The Author reserves the right to modify this License at any time. Continued use of the Software after modifications constitutes acceptance of the modified terms
+
+## 10. Contact Information
+
+For questions about this License, commercial licensing, or permission to use IndiqAI/IndiqPass branding:
+
+- **GitHub**: [Your GitHub profile or repository]
+- **Email**: [Your contact email]
+- **Website**: [Your website or company website]
+
+---
+
+**Last Updated**: December 8, 2025
+
+**Version**: 1.0
+
+---
+
+## Summary for Developers
+
+✅ **You CAN**:
+- View and study the code
+- Use it for learning and personal projects
+- Modify and distribute for non-commercial purposes
+- Contribute improvements via pull requests
+
+❌ **You CANNOT**:
+- Use it commercially without permission
+- Use IndiqAI/IndiqPass branding commercially
+- Remove license notices or attribution
+
+💼 **Want commercial use?** Contact us for licensing!
