@@ -1,16 +1,19 @@
 ![banner](./recursos/imagens/banner.jpg)
-# Primeiros Passos em Sui
+
+# Primeiros Passos em Sui Move
 
 **Por Lucas Buarque** | [GitHub](https://github.com/lucasbuarque)
 
+Repositório completo para aprender **Sui Move** do zero, com tutoriais práticos e um projeto real de sistema de fidelidade on-chain.
+
 ---
 
-## 📋 Sobre Este Repositório
+## 🚀 O que você vai aprender
 
-Este repositório contém uma coleção de exemplos práticos e tutoriais sobre **Sui Move**, incluindo:
-
-- 📚 **Tutoriais básicos** - Conceitos fundamentais de Move (variáveis, structs, functions, etc.)
-- 🚀 **IndiqPass** - Sistema completo de fidelidade e indicações on-chain (projeto destaque!)
+- ✅ **Fundamentos de Move** - Sintaxe, tipos, structs, funções
+- ✅ **Blockchain Sui** - Objetos, transações, ownership
+- ✅ **Projeto Real** - IndiqPass, sistema de fidelidade completo
+- ✅ **Deploy na Testnet** - Publique seu primeiro contrato
 
 ---
 
@@ -20,33 +23,14 @@ Este repositório contém uma coleção de exemplos práticos e tutoriais sobre 
 ![Tests](https://img.shields.io/badge/tests-9%2F9%20passing-success)
 ![Move](https://img.shields.io/badge/Sui-Move-blue)
 
-**IndiqPass** é um sistema de cartão de fidelidade e programa de indicações rodando diretamente na blockchain Sui.
+**Sistema de fidelidade e indicações on-chain**
 
-### ✨ Features
-
-- 💳 Criação de cartões de fidelidade on-chain
-- ⭐ Sistema de pontos por compras
-- 🤝 Sistema de pontos por indicações
+- 💳 Cartões de fidelidade como NFTs
+- ⭐ Pontos por compras e indicações
 - 🎁 Resgate de recompensas
-- 🧪 100% testado (9/9 testes passando)
+- 🧪 100% testado (9/9 testes)
 
-### 🚀 Quick Start
-
-```bash
-# Navegue até o projeto
-cd backend/indiqpass
-
-# Build
-sui move build
-
-# Teste
-sui move test
-
-# Leia a documentação
-open INDEX.md  # ou README.md
-```
-
-📖 **[Ver documentação completa do IndiqPass →](./backend/indiqpass/INDEX.md)**
+📖 **[Ver documentação →](./backend/indiqpass/README.md)**
 
 ---
 
@@ -70,385 +54,192 @@ Aprenda os fundamentos de Sui Move com exemplos práticos:
 
 ---
 
-## 🎓 Introdução ao Sui
+## 🎓 O que é Sui?
 
-**Sui** é uma plataforma de blockchain e contratos inteligentes de **camada 1** projetada para que a propriedade de ativos digitais seja rápida, privada, segura e acessível.
+**Sui** é uma blockchain Layer 1 rápida, segura e com baixo custo, ideal para aplicações que exigem alta performance.
 
-**Move** é uma linguagem de código aberto para escrever pacotes seguros para manipular objetos na blockchain. Ela permite bibliotecas, ferramentas e comunidades de desenvolvedores comuns em blockchains com modelos de dados e execução muito diferentes.
+**Move** é uma linguagem de programação segura para smart contracts, criada originalmente para o Diem (projeto do Facebook) e adotada pela Sui.
 
-## ⚙️ Pré-requisitos
+---
 
-### 1. Instalar Sui CLI
+## ⚡ Setup Rápido (5 minutos)
 
-Siga a documentação oficial para instalar o Sui CLI no seu sistema:
+### 1️⃣ Instale o Sui CLI
 
-**macOS/Linux:**
+**macOS:**
 ```bash
 brew install sui
 ```
 
-**Ou via Cargo:**
+**Linux:**
 ```bash
-cargo install --locked --git https://github.com/MystenLabs/sui.git --branch testnet sui
+curl -sSfL https://raw.githubusercontent.com/Mystenlabs/suiup/main/install.sh | sh
+suiup install sui
 ```
 
-**Verificar instalação:**
+**Windows:**
+```powershell
+# Baixe de: https://github.com/Mystenlabs/suiup/releases
+suiup install sui
+```
+
+**Verifique:**
 ```bash
 sui --version
 ```
 
-📖 [Documentação oficial de instalação](https://docs.sui.io/build/install)
+📖 [Mais opções de instalação](https://docs.sui.io/build/install)
 
-### 2. Instalar um Editor de Código
-
-Recomendamos o **Visual Studio Code** com as seguintes extensões:
-
-- [Move (Extension)](https://marketplace.visualstudio.com/items?itemName=mysten.move) - Language server para Move
-- [Move Formatter](https://marketplace.visualstudio.com/items?itemName=mysten.prettier-move) - Formatador de código
-- [Move Syntax](https://marketplace.visualstudio.com/items?itemName=damirka.move-syntax) - Syntax highlighting
-
-📥 [Baixar VS Code](https://code.visualstudio.com/)
-
----
-
-## 🚀 Como Usar Este Repositório
-
-### 1️⃣ Clone o Repositório
+### 2️⃣ Clone este repositório
 
 ```bash
 git clone https://github.com/lucasbuarque/calculadora-indiqai.git
 cd calculadora-indiqai/sui-first-steps
 ```
 
-### 2️⃣ Escolha Seu Caminho
+### 3️⃣ Teste um exemplo
 
-**🎯 Quer usar o IndiqPass?**
 ```bash
-cd backend/indiqpass
-open INDEX.md  # Leia o índice de documentação
-```
-
-**📚 Quer aprender Sui Move do zero?**
-```bash
-cd backend/00_intro  # Comece pelo básico
-```
-
-### 3️⃣ Build e Teste
-
-Em qualquer pasta de exemplo:
-```bash
-# Build do projeto
+cd backend/00_intro
 sui move build
-
-# Rodar testes
 sui move test
 ```
 
+✅ **Pronto! Você já compilou e testou seu primeiro código Move!**
+
 ---
 
-## 📖 Estrutura do Repositório
+## � Tutoriais: Do Zero ao Deploy
 
-```
-sui-first-steps/
-├── README.md                  ← Você está aqui
-├── backend/
-│   ├── indiqpass/            ← 🌟 Projeto principal
-│   │   ├── INDEX.md          ← Comece por aqui!
-│   │   ├── sources/          ← Código Move
-│   │   ├── tests/            ← Testes
-│   │   └── ...docs...        ← Documentação completa
-│   ├── 00_intro/             ← Tutorial: Introdução
-│   ├── 01_variables/         ← Tutorial: Variáveis
-│   ├── 02_referencias/       ← Tutorial: Referências
-│   └── ...                   ← Mais tutoriais
-├── extras/                    ← Conteúdo extra
-└── recursos/                  ← Imagens e recursos
-```
+Siga os tutoriais na ordem para dominar Move:
+
+### 🔰 Nível Iniciante
+
+| # | Tópico | O que você aprende |
+|---|--------|--------------------|
+| 00 | [Introdução](./backend/00_intro) | Olá mundo em Move |
+| 01 | [Variáveis](./backend/01_variables) | Declaração e tipos |
+| 02 | [Referências](./backend/02_referencias) | Borrowing e ownership |
+| 03 | [Tipos Primitivos](./backend/03_tipos_primitivos) | u8, u64, bool, address |
+| 04 | [Condicionais](./backend/04_condicionais) | if/else e lógica |
+
+### 🎯 Nível Intermediário
+
+| # | Tópico | O que você aprende |
+|---|--------|--------------------|
+| 05 | [Vetores](./backend/05_vetores) | Arrays e coleções |
+| 06 | [Strings](./backend/06_strings) | Manipulação de texto |
+| 07 | [Structs](./backend/07_structs) | Estruturas de dados |
+| 08 | [Habilidades](./backend/08_habilidades) | key, store, copy, drop |
+
+### 🚀 Nível Avançado
+
+| # | Tópico | O que você aprende |
+|---|--------|--------------------|
+| 09 | [Address](./backend/09_address) | Endereços na blockchain |
+| 10 | [Funções](./backend/10_funcoes) | Entry functions, públicas |
+| 💎 | [**IndiqPass**](./backend/indiqpass) | **Projeto completo real** |
+
+**💡 Dica:** Cada tutorial tem um `README.md` com explicações e exemplos. Execute `sui move build` e `sui move test` em cada pasta!
 
 ---
 
 ## 🎓 Roteiro de Aprendizado
 
-### Para Iniciantes (2-3 horas)
-
-1. ✅ Leia esta introdução
-2. ✅ Instale Sui CLI
-3. ✅ Percorra os tutoriais básicos (00 a 10)
-4. ✅ Teste cada exemplo
-
-### Para Desenvolvedores (1 dia)
-
-1. ✅ Complete o roteiro iniciante
-2. ✅ Estude o código do IndiqPass
-3. ✅ Modifique e teste alterações
-4. ✅ Publique no testnet
-
-### Para Produção (1 semana)
-
-1. ✅ Domine os conceitos
-2. ✅ Integre com backend
-3. ✅ Crie frontend
-4. ✅ Teste extensivamente
-5. ✅ Publique em mainnet
-
----
-
-## 🛠️ Instalação do Git
-
-1. [Instalação no Mac](#macgit)
-2. [Instalação no Windows](#windowsgit)
-3. [Instalação no Linux](#linuxgit)
-
-## Instalação no Mac <a id="macgit"></a>
-
-1. Certifique-se de ter o **Homebrew** instalado: [https://brew.sh/](https://brew.sh/).
-2. Abra um terminal e insira os seguintes comandos:
-```sh
-brew update
-brew install git
-```
-3. Se precisar de mais informações sobre a instalação, você pode encontrá-las na documentação [oficial do Git](https://www.git-scm.com/download/mac).
-
-## Instalação no Windows <a id="windowsgit"></a>
-
-1. Baixe o instalador na página oficial do Git: [https://www.git-scm.com/download/win](https://www.git-scm.com/download/win).
-2. Siga as instruções indicadas. As opções padrão do instalador geralmente são suficientes, mas se você quiser personalizar sua instalação de alguma forma e souber o que está fazendo, sinta-se à vontade para mudar o que for necessário.
-
-## Instalação no Linux <a id="linuxgit"></a>
-
-1. Para distribuições baseadas em Debian, como o Ubuntu, você pode executar os seguintes comandos:
+### 🟢 Iniciante (2-3 horas)
 ```bash
-sudo apt update
-sudo apt install git-all
-```
-2. Se precisar de informações sobre a instalação em alguma outra distribuição específica, você pode encontrá-las na documentação [oficial do Git](https://git-scm.com/download/linux).
+# 1. Percorra tutoriais 00-04
+cd backend/00_intro && sui move test
+cd ../01_variables && sui move test
+# ... continue até 04_condicionais
 
-## 2. Configurando o Git
-
-É uma boa ideia configurar os valores globais do seu usuário antes de começar a usar o Git. Você pode fazer isso com os seguintes comandos.
-
-> :information_source: Lembre-se de substituir os exemplos com seus dados pessoais.
-```sh
-git config --global user.name "Nome Exemplo"
-git config --global user.email nome@exemplo.com
+# 2. Experimente modificar o código
+# 3. Veja os erros e aprenda com eles
 ```
 
-## 3. Clonando o repositório localmente
+### 🟡 Intermediário (1 dia)
+```bash
+# 1. Complete tutoriais 05-08
+# 2. Estude o código do IndiqPass
+cd backend/indiqpass
+sui move build
+sui move test
 
-No seu terminal, execute o seguinte comando:
-
-```sh
-git clone https://github.com/AguaPotavel/sui-first-steps.git
+# 3. Modifique e teste
 ```
 
-> :information_source: Lembre-se que você pode mudar o diretório onde o repositório será clonado. Utilize `cd` para se mover entre os diretórios do seu computador, e `mkdir` para criar um novo. </br></br>
-> Mais informações: [Tutorial de comandos básicos](https://aprendolinux.com/aprende-los-comandos-basicos-de-linux/).
+### 🔴 Avançado (1 semana)
+```bash
+# 1. Publique no testnet
+sui client publish --gas-budget 100000000
 
-Uma vez que o repositório for clonado, você pode navegar até ele:
-```sh
-cd sui-first-steps
+# 2. Integre com frontend (TypeScript SDK)
+# 3. Crie seu próprio projeto
 ```
-
-Para visualizar o conteúdo, você pode executar o comando:
-
-```sh
-ls -a
-```
-
-E para abri-lo no editor de código (no nosso caso, VS Code), você pode executar:
-```sh
-code .
-```
-
-## 3. Instalação da Sui CLI
-
-Para poder interagir com o conteúdo dos tutoriais, é necessário instalar a **Sui CLI**.
-
-1. [Instalação no Mac](#maccli)
-2. [Instalação no Windows](#windowscli)
-3. [Instalação no Linux](#linuxcli)
-
-## Instalação no Mac <a id="maccli"></a>
-
-Podemos instalar o Sui de duas maneiras. Uma usando a ferramenta desenvolvida pela MystenLabs, `suiup`, e outra utilizando o Hombrew. A recomendada para dar seus primeiros passos sem a necessidade de muitas configurações é `suiup`, no entanto, esta ferramenta não deve ser utilizada em ambientes de produção. Vamos explorar ambas as opções.
-
-### `suiup`
-
-* Execute o seguinte comando no seu terminal:
-```sh
-curl -sSfL https://raw.githubusercontent.com/Mystenlabs/suiup/main/install.sh | sh
-```
-
-* Ou você pode baixar os binários e instalá-lo manualmente diretamente do [repositório oficial do `suiup`](https://github.com/Mystenlabs/suiup/releases). Esta opção é um pouco mais avançada, então se você nunca instalou algo de forma semelhante, recomendamos usar o comando acima.
-
-> :information_source: Se você não sabe qual arquitetura possui, pode executar o seguinte comando:
-> ```sh
-> uname -m
-> ```
-> * Se aparecer **arm64** → Baixe suiup-macOS-arm64.tar.gz.
-> * Se aparecer **x86_64** → Baixe suiup-macOS-x86_64.tar.gz.
-
-1. Você pode testar se a instalação do `suiup` foi bem-sucedida executando o seguinte comando:
-```sh
-suiup --version
-```
-
-2. Depois de instalar o `suiup`, independentemente da opção escolhida, execute o seguinte comando para instalar a Sui CLI:
-```sh
-suiup install sui
-```
-
-3. E novamente, você pode testar se tudo correu bem usando:
-```sh
-sui --version
-```
-
-### Hombrew
-
-1. Certifique-se de ter o **Homebrew** instalado: [https://brew.sh/](https://brew.sh/).
-2. Abra um terminal e insira os seguintes comandos:
-```sh
-brew update
-brew install sui
-```
-3. Você pode testar se tudo foi instalado corretamente executando:
-```sh
-sui --version
-```
-
-## Instalação no Windows <a id="windowscli"></a>
-
-Podemos instalar o Sui de duas maneiras. Uma usando a ferramenta desenvolvida pela MystenLabs, `suiup`, e outra utilizando um gerenciador de pacotes como o **Chocolatey**. A recomendada para dar seus primeiros passos sem a necessidade de muitas configurações é `suiup`, no entanto, esta ferramenta não deve ser utilizada em ambientes de produção. Vamos explorar ambas as opções.
-
-### `suiup`
-
-1. Baixe o instalador diretamente do [repositório oficial do `suiup`](https://github.com/Mystenlabs/suiup/releases).
-
-> :information_source: Se você não sabe qual arquitetura possui, simplesmente baixe o arquivo `suiup-Windows-msvc-x86_64.zip`.
-
-2. Uma vez instalado, abra um terminal e execute o seguinte comando para verificar se tudo correu bem:
-```sh
-suiup --version
-```
-> :information_source: Recomendamos usar o Powershell como terminal para executar todos os comandos deste repositório no Windows.
-
-3. Depois de instalar o `suiup`, execute o seguinte comando para instalar a Sui CLI:
-```sh
-suiup install sui
-```
-
-4. E novamente, você pode testar se tudo correu bem usando:
-```sh
-sui --version
-```
-
-### `choco`
-
-1. Certifique-se de ter o **Chocolatey** instalado: [https://chocolatey.org/install](https://chocolatey.org/install).
-2. Abra um terminal e insira o seguinte comando:
-```sh
-choco install sui
-```
-3. Você pode testar se tudo foi instalado corretamente executando:
-```sh
-sui --version
-```
-
-## Instalação no Linux <a id="linuxcli"></a>
-
-Podemos instalar o Sui de duas maneiras. Uma usando a ferramenta desenvolvida pela MystenLabs, `suiup`, e outra utilizando o gerenciador de pacotes para **Rust** chamado `cargo`. A recomendada para dar seus primeiros passos sem a necessidade de muitas configurações é `suiup`, no entanto, esta ferramenta não deve ser utilizada em ambientes de produção. Vamos explorar ambas as opções.
-
-### `suiup`
-
-* Execute o seguinte comando no seu terminal:
-```sh
-curl -sSfL https://raw.githubusercontent.com/Mystenlabs/suiup/main/install.sh | sh
-```
-
-* Ou você pode baixar os binários e instalá-lo manualmente diretamente do [repositório oficial do `suiup`](https://github.com/Mystenlabs/suiup/releases). Esta opção é um pouco mais avançada, então se você nunca instalou algo de forma semelhante, recomendamos usar o comando acima.
-
-> :information_source: Se você não sabe qual arquitetura possui, pode executar o seguinte comando:
-> ```sh
-> uname -m
-> ```
-> * Se aparecer **arm64** → Baixe `suiup-Linux-musl-arm64.tar.gz`.
-> * Se aparecer **x86_64** → Baixe `suiup-Linux-musl-x86_64.tar.gz`.
-
-1. Você pode testar se a instalação do `suiup` foi bem-sucedida executando o seguinte comando:
-```sh
-suiup --version
-```
-
-2. Depois de instalar o `suiup`, independentemente da opção escolhida, execute o seguinte comando para instalar a Sui CLI:
-```sh
-suiup install sui
-```
-
-3. E novamente, você pode testar se tudo correu bem usando:
-```sh
-sui --version
-```
-
-### `cargo`
-
-1. Certifique-se de ter o `rustup` instalado: [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install).
-2. Abra um terminal e insira os seguintes comandos:
-```sh
-rustup update stable
-cargo install --git https://github.com/MystenLabs/sui.git sui --branch devnet
-```
-3. Você pode testar se tudo foi instalado corretamente executando:
-```sh
-sui --version
-```
-
-## 4. Instalação do MVR
-
-O **Move Registry** (MVR) é um gerenciador de pacotes para o Move. Ele permite a qualquer pessoa publicar e utilizar pacotes publicados em novas aplicações desenvolvidas com o Move. 
-
-1. A forma de instalar o `mvr` depende de como você instalou a `sui` CLI.
-
-* Se você instalou com `suiup` (independentemente do seu sistema operacional), execute o seguinte comando:
-```sh
-suiup install mvr
-```
-
-* Se você instalou o `sui` utilizando `cargo`, execute o seguinte comando:
-```sh
-cargo install --locked --git https://github.com/mystenlabs/mvr --branch release mvr
-```
-
-* Por último, se você realizou a instalação manualmente baixando o instalador e **não** instalou o `suiup`, pode baixar o instalador do `mvr` no [repositório oficial](https://github.com/MystenLabs/mvr/releases).
-
-2. Independentemente da opção escolhida, lembre-se de verificar se a instalação foi realizada corretamente:
-```sh
-mvr --version
-```
-
-## 5. Interagindo com o repositório.
-
-O repositório é composto por várias pastas com arquivos para cada tutorial, simplesmente navegue até elas usando `cd` e siga as instruções dentro delas.</br></br>
-Cada tutorial possui um arquivo `README.md` com instruções claras de como interagir com eles.
 
 ---
 
-## 🌟 Destaques do Repositório
+## � Comandos Úteis
 
-### IndiqPass - Sistema de Fidelidade On-Chain
+```bash
+# Compilar projeto
+sui move build
 
-O projeto principal deste repositório demonstra:
+# Executar testes
+sui move test
 
-- ✅ Arquitetura completa de um sistema real
-- ✅ Integração on-chain + off-chain
-- ✅ Testes abrangentes (100% cobertura)
-- ✅ Documentação profissional bilíngue
-- ✅ Pronto para produção
+# Publicar no testnet
+sui client publish --gas-budget 100000000
 
-**Estatísticas:**
-- 📊 ~410 linhas de código Move
-- 🧪 9 testes automatizados
-- 📖 ~5000+ linhas de documentação
-- 🌍 2 idiomas (PT + EN)
+# Ver seus objetos
+sui client objects
+
+# Chamar uma função
+sui client call \
+  --package PACKAGE_ID \
+  --module MODULE_NAME \
+  --function FUNCTION_NAME \
+  --gas-budget 10000000
+```
+
+---
+
+## 🎯 Estrutura de Cada Tutorial
+
+```
+00_intro/
+├── README.md          # Explicação do conceito
+├── Move.toml          # Configuração do pacote
+└── sources/
+    └── intro.move     # Código de exemplo
+```
+
+**Como usar:**
+1. Leia o `README.md`
+2. Estude o código em `sources/`
+3. Execute `sui move build`
+4. Execute `sui move test`
+5. Modifique e experimente!
+
+---
+
+## 📦 IndiqPass: Projeto Real
+
+Sistema completo de fidelidade on-chain com:
+
+**Funcionalidades:**
+- Criar cartões de fidelidade
+- Adicionar pontos por compra
+- Adicionar pontos por indicação
+- Resgatar recompensas
+
+**Arquitetura:**
+- Código Move testado (9/9 testes ✅)
+- Documentação completa em PT e EN
+- Exemplos de integração
+- Pronto para deploy
+
+📖 **[Começar com o IndiqPass →](./backend/indiqpass/README.md)**
 
 ---
 
